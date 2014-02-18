@@ -26,7 +26,6 @@ $(function() {
 		var entry = $('tbody tr').first();
 		prev_word = $('#rand-word').text();
 		entry.children().first().text(prev_word);
-		prev_answer = $('#answer-box').val();
 		entry.children(":nth-child(2)").text(prev_answer);
 		
 		if(prev_answer == prev_key) {
@@ -39,6 +38,7 @@ $(function() {
 	}
 	
 	$('#submit-answer').click(function(){
+		prev_answer = $('#answer-box').val();
 		addPrevWord();
 		newWord();
 	});
@@ -47,7 +47,7 @@ $(function() {
 		source: keys,
 		minLength:2,
 		select: function(event, ui) {
-			$('#answer-box').text(ui.item.label);
+			prev_answer = ui.item.value;
 			addPrevWord();
 			newWord();
 			return false;
