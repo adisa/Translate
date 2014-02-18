@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+   COLLABORATORS:
+   
+  -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ready, Set, Translate !</title>
+    <link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link type="text/css" href="translate_game.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script type="text/javascript" src="dicts.json"></script>
+    <script type="text/javascript" src="translate_game.js"></script>
+
+  </head>
+  <body>
+  	<div id="content">
+    	<div id="title">Translate from <span class="title-lang" id="lang-from"></span> to <span class="title-lang" id="lang-to"></span></div>
+    	<table id="translate">
+    		<thead>
+    			<tr>
+    				<th>Spanish</th>
+    				<th>English</th>
+    				<th>Answer</th>
+    			</tr>
+    			<tr id="cur-trans">
+    				<td id="rand-word"></td>
+    				<td><input id="answer-box" type="text" /></td>
+    				<td><input id="submit-answer" type="submit" value="See Answer" /></td>
+    			</tr>
+    		</thead>
+    		<tbody>   			
+    			<tr class="correct">
+    				<td>calabaza</td>
+    				<td>pumpkin</td>
+    				<td></td>
+    			</tr>
+    			<tr class="incorrect">
+    				<td>postmodernidad</td>
+    				<td>phone</td>
+    				<td>postmodern</td>
+    			</tr>
+    		</tbody>    	
+    	<table>
+	</div>
+  </body>
+</html>
