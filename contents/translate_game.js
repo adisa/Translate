@@ -53,4 +53,10 @@ $(function() {
 			return false;
 		},
 	});
+	
+	$(document).keypress(function(event) {
+		if(event.keyCode == 13){
+			$('#submit-answer').click();
+		}
+	});
 });
